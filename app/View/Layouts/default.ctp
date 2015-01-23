@@ -8,6 +8,12 @@
 <body>
 
 	<div class="col-lg-12">
+		<div class="row">
+			<div class="menu">
+
+			</div>
+		</div>
+		
 		<?php echo $this->Session->flash(); ?>
 		<?php echo $this->fetch('content'); ?>
 	</div>

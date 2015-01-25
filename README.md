@@ -1,50 +1,43 @@
-# CakePHP
-
-[![Latest Stable Version](https://poser.pugx.org/cakephp/cakephp/v/stable.svg)](https://packagist.org/packages/cakephp/cakephp)
-[![License](https://poser.pugx.org/cakephp/cakephp/license.svg)](https://packagist.org/packages/cakephp/cakephp)
-[![Bake Status](https://secure.travis-ci.org/cakephp/cakephp.png?branch=master)](http://travis-ci.org/cakephp/cakephp)
-[![Code consistency](http://squizlabs.github.io/PHP_CodeSniffer/analysis/cakephp/cakephp/grade.svg)](http://squizlabs.github.io/PHP_CodeSniffer/analysis/cakephp/cakephp/)
-
-[![CakePHP](http://cakephp.org/img/cake-logo.png)](http://www.cakephp.org)
-
-CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Active Record, Association Data Mapping, Front Controller and MVC.
-Our primary goal is to provide a structured framework that enables PHP users at all levels to rapidly develop robust web applications, without any loss to flexibility.
+Informations importantes au projet
+===================
 
 
-## Some Handy Links
+Ce document permettra de répertorier les différentes méthodes à utiliser : Conventions de nommages, commentaires, etc...
 
-[CakePHP](http://www.cakephp.org) - The rapid development PHP framework
+----------
 
-[CookBook](http://book.cakephp.org) - THE CakePHP user documentation; start learning here!
+Premier point : **Conventions de nommages**
+-------------
 
-[API](http://api.cakephp.org) - A reference to CakePHP's classes
+En ce qui concerne les noms de variables, de classes, de fonctions, on sera au maximum en anglais.
+En effet, CakePHP utilise lui même certaines conventions sur ses noms de classes, modèles et vues.
+Pour les noms de fonctions, bien se souvenir que les fonctions sont liés à une pages (qui sera la classe).
 
-[Plugins](http://plugins.cakephp.org/) - A repository of extensions to the framework
+Par exemple, la class Filieres (là, on a pas le choix, en français :) ) aura donc plusieurs méthodes (au hasard ;) )
+- getFilieres ($idFiliere)
+- setFilieres ($idFiliere)
+Bien utiliser les getters et les setters dans deux fonctions distinctes.
 
-[The Bakery](http://bakery.cakephp.org) - Tips, tutorials and articles
+Deuxième point important : **Les commentaires**
+--- 
+On commente tout ce qu'on peut !  Les fonctions, les variables, les boucles ... TOUT !
+On est plusieurs à travailler dessus, donc pensez aux copains qui passeront derrière :D
 
-[Community Center](http://community.cakephp.org) - A source for everything community related
+Pour vos commentaires de méthodes, utilisez cette syntaxe :
 
-[Training](http://training.cakephp.org) - Join a live session and get skilled with the framework
-
-[CakeFest](http://cakefest.org) - Don't miss our annual CakePHP conference
-
-[Cake Software Foundation](http://cakefoundation.org) - Promoting development related to CakePHP
-
-
-## Get Support!
-
-[#cakephp](http://webchat.freenode.net/?channels=#cakephp) on irc.freenode.net - Come chat with us, we have cake
-
-[Google Group](https://groups.google.com/group/cake-php) - Community mailing list and forum
-
-[GitHub Issues](https://github.com/cakephp/cakephp/issues) - Got issues? Please tell us!
-
-[Roadmaps](https://github.com/cakephp/cakephp/wiki#roadmaps) - Want to contribute? Get involved!
+```php
+/***
+* Récupère la totalité des trucs
+* @params : $monSuperId (int)
+* @return : listeDeSuperbesFonctions (array)
+***/
+public function maSuperbeFonction($monSuperId){
+	[.....]
+	$this->set('listeDeSuperbesFonctions', $maSuperVariables)
+}
+```
 
 
-## Contributing
-
-[CONTRIBUTING.md](CONTRIBUTING.md) - Quick pointers for contributing to the CakePHP project
-
-[CookBook "Contributing" Section (2.x)](http://book.cakephp.org/2.0/en/contributing.html) [(3.0)](http://book.cakephp.org/3.0/en/contributing.html) - Version-specific details about contributing to the project
+Troisièmes points : **Vos questions**
+---
+N'hésitez pas à m'envoyer des mails en me posant vos questions, je suis pas dieu, je sais pas tout, mais si un jour une question sur CakePHP ou quoi, hésitez pas !

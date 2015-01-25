@@ -14,8 +14,9 @@
 			</div>
 		</div>
 		
-		<?php echo $this->Session->flash(); ?>
-		<?php echo $this->fetch('content'); ?>
+		<div class="container">
+			<?php echo $this->fetch('content'); ?>
+		</div>
 	</div>
 </body>
 </html>	

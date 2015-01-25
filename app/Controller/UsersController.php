@@ -6,7 +6,6 @@ class UsersController extends AppController{
 	* @return : redirect with message
 	**/
 	public function login(){
-		//echo $this->Auth->password('admin');
 		if(!empty($this->request->data)){
 			if($this->Auth->login()){
 				$this->Session->setFlash('Content de vous voir ' . $this->Session->read('Auth.User.username') . ' !', 'flash_success', array('escape' => false));

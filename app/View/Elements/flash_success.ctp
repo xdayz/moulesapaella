@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="col-xs-10 col-xs-offset-1">
+	<div class="col-xs-12">
 		<div class="alert alert-success" role="alert"><?php echo h($message); ?></div>
 	</div>
 </div>

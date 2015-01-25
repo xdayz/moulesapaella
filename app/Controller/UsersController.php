@@ -1,8 +1,12 @@
 <?php
 
 class UsersController extends AppController{
+	/**
+	* Connecte l'utilisateur
+	* @return : redirect with message
+	**/
 	public function login(){
-		echo $this->Auth->password('admin');
+		//echo $this->Auth->password('admin');
 		if(!empty($this->request->data)){
 			if($this->Auth->login()){
 				$this->Session->setFlash('Content de vous voir ' . $this->Session->read('Auth.User.username') . ' !', 'flash_success', array('escape' => false));
@@ -16,6 +20,10 @@ class UsersController extends AppController{
 		}
 	}
 
+	/**
+	* Déconnecte l'utilisateur
+	* @return : Redirect
+	**/
 	public function logout(){
 		$this->Auth->logout();
 		$this->redirect(array("controller" => "users", "action" => "login"));

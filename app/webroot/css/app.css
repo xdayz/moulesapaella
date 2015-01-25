@@ -2,10 +2,12 @@ body{
 	background-image: url('http://w3layouts.com/demos/blacksea/web/images/banner.jpg');
 	background-repeat: none;
 	background-size: cover;
+	color: white;
 }
 
 .menu{
 	background-color: #55adb7;
 	height: 50px;
 	width: 100%;
+	margin-bottom: 1em;
 }

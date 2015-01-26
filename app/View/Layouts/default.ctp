@@ -7,7 +7,7 @@
 </head>
 <body>
 
-	<div class="col-lg-12">
+	<div class="col-xs-12">
 		<div class="row">
 			<div class="menu">
 
@@ -17,6 +17,19 @@
 		<div class="container">
 			<?php echo $this->fetch('content'); ?>
 		</div>
+
 	</div>
+
+	
+	<?php if($this->Session->read('Auth.User.username')){ ?>
+		<div class="bottom col-xs-12">
+			<a href="#" class="gros_menu col-xs-4">Item 1</a>
+			<a href="#" class="gros_menu col-xs-4">Item 2</a>
+			<a href="#" class="gros_menu col-xs-4">Item 3</a>
+			<a href="#" class="gros_menu col-xs-4">Item 4</a>
+			<a href="#" class="gros_menu col-xs-4">Item 5</a>
+			<a href="#" class="gros_menu col-xs-4">Item 6</a>
+		</div>
+	<?php } ?>
 </body>
 </html>	

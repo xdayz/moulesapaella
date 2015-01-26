@@ -2,7 +2,7 @@ body{
 	background-image: url('http://w3layouts.com/demos/blacksea/web/images/banner.jpg');
 	background-repeat: none;
 	background-size: cover;
-	/*color: white;*/
+	height: 100%;
 }
 
 .menu{
@@ -26,7 +26,7 @@ body{
 
 /************ Bloc de connexion  ******************/
 .connexion{
-	margin-top: 8em;
+	margin-top: 2em;
 }
 .connexion > .jumbotron {
 	text-align: center;
@@ -39,6 +39,32 @@ body{
 .connexion .glyphicon{
 	font-size: 10rem;
 	color: rgba(0, 0, 0, 0.3);
+}
+
+/************ Menu bas ******************/
+.bottom{
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	font-size: 2em;
+	margin: 0;
+	padding: 0;
+}
+
+.gros_menu{
+	background-image: url('../img/carbon_pattern.png');
+	width: calc(100%/6);
+	margin: 0;
+	padding: 1em 0 1em 0;
+	position: relative;
+	text-align: center;
+	-webkit-transition: margin-top 0.3s ease-out; /* For Safari 3.1 to 6.0 */
+    transition: margin-top 0.3s ease-out;
+}
+
+.gros_menu:hover{
+	margin-top: -2%;
 }
 
 

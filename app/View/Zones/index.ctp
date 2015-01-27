@@ -13,10 +13,16 @@
 		<div class="col-xs-4">
 			<div class="panel panel-primary">
 			<div class="panel-heading">Liste des zones existantes</div>
-				<div class="panel-body full-height">
-				Ici la liste des zones existantes cliquables pour l'afficher sur la google maps
-				</div>
-			</div>
+				
+			<ul class="list-group">
+				<?php foreach($zonesList as $zone){ ?>
+					<li class="list-group-item">
+						<span class="badge"><?= count($zone['Points']); ?> points</span>
+						<?= $zone['Zone']['name']; ?>
+					</li>
+				<?php } ?>
+			</ul>
+			
 		</div>
 	</div>
 </div>

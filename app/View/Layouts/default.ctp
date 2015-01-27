@@ -2,9 +2,15 @@
 <head>
 	<title>Moules à Paëlla</title>
 
+	<meta charset="UTF-8">
+
 	<?= $this->Html->css("http://bootflat.github.io/css/site.min.css"); ?>
 	<?= $this->Html->css("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"); ?>
 	<?= $this->Html->css("app.css"); ?>
+
+	<?= $this->Html->script('https://code.jquery.com/jquery-2.1.3.min.js'); ?>
+	<?= $this->Html->script('https://maps.googleapis.com/maps/api/js?key=AIzaSyCauJIAiYa6sE6xrzxUhcUjWiGKF8d8BoY'); ?>
+
 </head>
 <body>
 
@@ -32,5 +38,6 @@
 			<a href="#" class="gros_menu col-xs-4">Item 6</a>
 		</div>
 	<?php } ?> -->
+	
 </body>
 </html>	

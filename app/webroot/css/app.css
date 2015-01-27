@@ -13,6 +13,11 @@ body{
 	margin-bottom: 1em;
 }
 
+/************  Zones **************/
+#map-canvas{
+	height: 80%;
+}
+
 /************ Bloc de connexion  ******************/
 .connexion{
 	margin-top: 2em;

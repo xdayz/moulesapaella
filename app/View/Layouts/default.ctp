@@ -22,7 +22,7 @@
 	</div>
 
 	
-	<?php if($this->Session->read('Auth.User.username')){ ?>
+	<!-- <?php if($this->Session->read('Auth.User.username')){ ?>
 		<div class="bottom col-xs-12">
 			<a href="#" class="gros_menu col-xs-4">Item 1</a>
 			<a href="#" class="gros_menu col-xs-4">Item 2</a>
@@ -31,6 +31,6 @@
 			<a href="#" class="gros_menu col-xs-4">Item 5</a>
 			<a href="#" class="gros_menu col-xs-4">Item 6</a>
 		</div>
-	<?php } ?>
+	<?php } ?> -->
 </body>
 </html>	

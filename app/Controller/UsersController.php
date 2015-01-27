@@ -9,7 +9,7 @@ class UsersController extends AppController{
 		if(!empty($this->request->data)){
 			if($this->Auth->login()){
 				$this->Session->setFlash('Content de vous voir ' . $this->Session->read('Auth.User.username') . ' !', 'flash_success', array('escape' => false));
-				return $this->redirect(array("controller" => "filieres", "action" => "index"));
+				return $this->redirect(array("controller" => "zones", "action" => "index"));
 			}else{
 				$this->Session->setFlash('Pseudo ou mot de passe invalide.', 'flash_error');
 			}

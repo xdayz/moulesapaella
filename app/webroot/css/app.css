@@ -5,22 +5,12 @@ body{
 	height: 100%;
 }
 
+/************* Menu haut ***********/
 .menu{
-	background-color: #55adb7;
+	background-color: #37BC9B;
 	height: 50px;
 	width: 100%;
 	margin-bottom: 1em;
-}
-
-.container, .container-fluid {
-	padding-right: 15px;
-	padding-left: 15px;
-	margin-right: 0;
-	margin-left: 0;
-}
-
-.carte{
-	min-height: 72%;
 }
 
 /************ Bloc de connexion  ******************/
@@ -89,4 +79,15 @@ h2 {
 	margin-bottom: 3rem;
 	margin-left: 3rem;
 	margin-right: 3rem;
+}
+
+.full-height{
+	min-height: 85%;
+}
+
+.container, .container-fluid {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: 0;
+	margin-left: 0;
 }

@@ -1,5 +1,5 @@
 body{
-	background-image: url('http://w3layouts.com/demos/blacksea/web/images/banner.jpg');
+	background-image: url('../img/sea.jpg');
 	background-repeat: none;
 	background-size: cover;
 	height: 100%;
@@ -12,16 +12,15 @@ body{
 	margin-bottom: 1em;
 }
 
-.alert-danger{
-	background-color: #E74C3C;
-	color: white;
-	border-color: #C0392B;
+.container, .container-fluid {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: 0;
+	margin-left: 0;
 }
 
-.alert-success{
-	background-color: #2ECC71;
-	color: white;
-	border-color: #27AE60;
+.carte{
+	min-height: 72%;
 }
 
 /************ Bloc de connexion  ******************/

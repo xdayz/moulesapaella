@@ -1,7 +1,7 @@
 <div class="connexion col-xs-6 col-xs-offset-3">
 	<div class="jumbotron">
 	  <div class="container">
-	    <span class="glyphicon glyphicon-user"></span>
+	    <i class="fa fa-user"></i>
 	    <h2>Connexion</h2>
 	    <?php echo $this->Session->flash(); ?>
 	    <div class="box">

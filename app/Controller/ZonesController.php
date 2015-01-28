@@ -1,24 +1,25 @@
 <?php
 
 class ZonesController extends AppController{
-	/**
-	* Retourne la liste des zones avec leurs points GPS
-	* @return : $zonesList (array)
-	**/
 	public function index(){
-		//On récupère la liste des zones
-		$zonesList = $this->Zone->find('all');
+		//Retrouen simplement la vue
+	}
 
-
-		//On transmet les données
+	/**
+	* Fonction appellé en Ajax seulement
+	* @return $zoneList (json)
+	**/
+	public function getZone(){
 		if($this->request->is('ajax')){
-			$this->autoRender = false;
-			$this->layout = false;
-			return json_encode($zonesList);
+			//On récupère la liste des zones
+			$zonesList = $this->Zone->find('all');
+
+			//On transmet les données
+				$this->autoRender = false;
+				$this->layout = false;
+				return json_encode($zonesList);
 		}else{
-			//Le premier paramètre correspond a la variable passé à la vue
-			//Le second correspond au tableau / variable à envoyer à la vue
-			$this->set('zonesList', $zonesList);
+			$this->redirect(array("controller" => "zones", "actions" => "index"));
 		}
 	}
 }

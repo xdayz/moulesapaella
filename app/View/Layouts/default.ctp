@@ -9,7 +9,7 @@
 	<?= $this->Html->css("app.css"); ?>
 
 	<?= $this->Html->script('https://code.jquery.com/jquery-2.1.3.min.js'); ?>
-	<?= $this->Html->script('https://maps.googleapis.com/maps/api/js?key=AIzaSyCauJIAiYa6sE6xrzxUhcUjWiGKF8d8BoY'); ?>
+	<?= $this->Html->script('https://maps.googleapis.com/maps/api/js?key=AIzaSyCauJIAiYa6sE6xrzxUhcUjWiGKF8d8BoY&libraries=drawing'); ?>
 
 </head>
 <body>

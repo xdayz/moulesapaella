@@ -1,6 +1,4 @@
 <div class="col-xs-12">
-	<?php //echo $this->Session->flash(); ?>
-
 	<div class="row">
 		<div class="col-xs-8">
 			<div class="panel panel-primary">
@@ -19,18 +17,70 @@
 			<ul class="list-group" id="zonesList">
 				
 			</ul>
+			</div>
 		</div>
 	</div>
 </div>
 
+<div class="modal fade" id="zoneModal" tabindex="-1" role="dialog" aria-labelledby="zoneModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+	            <h4 class="modal-title" id="zoneModalTitle">Ajout d'une zone</h4>
+            </div>
+            <?= $this->Form->create('Zone', array("role" => "form")); ?>
+	            <div class="modal-body">
+    	    		<div class="form-group">
+            			<?= $this->Form->input('name', array('label' => "Nom de la zone", "class" => "form-control")); ?>
+            		</div>
+	            </div>
+
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+	                <?= $this->Form->button('Ajouter', array("type" => "submit", "class" => 'btn btn-primary')); ?>
+	        	</div>
+            <?= $this->Form->end(); ?>
+	    </div>
+  	</div>
+</div>
 
 <script type="text/javascript">
 	$(document).ready(function(){
-		var zonesList;
+		getZone();
+		var zonePoints = {};
+
+		//on init les options de la modal. Focus sur l'input.
+		$('#zoneModal').on('shown.bs.modal', function () {
+		    $('input#ZoneName').focus();
+		});	
+
+		//On ne permet pas l'envoi du Form des zones (tout en ajax)
+		$("#ZoneIndexForm").on('submit', function(e){
+			
+			alert( $("input#ZoneName").val() );
+
+			$.ajax({
+				url : "zones/addZone",
+				type : "POST",
+				dataType : 'json',
+				data: {
+					points:  JSON.stringify(zonePoints),
+					nameZone: $("input#ZoneName").val()
+				},
+				success: function(data){
+					getZone();
+				},
+				error: function(data){
+					alert(data);
+				}
+			});
+			e.preventDefault();
+			return false;
+		});
 
 		function getZone(){
 			//Au chargement, on récupère la liste des zones
-			$.get("zones/getZone", function(data){
+			$.get("zones/getZones", function(data){
 				//On convertie tout ça en tableau
 				zonesList = jQuery.parseJSON(data);
 
@@ -42,10 +92,11 @@
 					$("#zonesList").append('<li class="list-group-item zone"><span class="badge">' + value['Points'].length + ' points</span>' + value['Zone']['name'] + '</li>');
 				});
 
-				//On initialise maintenant la map
 				initialize();
 			});
+				//On initialise maintenant la map
 		}
+
 
 		function initialize(){
 			//Configuration de base de la map
@@ -104,12 +155,13 @@
 			google.maps.event.addListener(drawingManager,'polygoncomplete',function(polygon) {
 				//TODO
 				//Afficher la popup + requete ajax (getZone)
-				console.log(polygon.getPath());
+				$('#zoneModal').modal('show');
+				//On envoi que les points des géolocalisations.
+				zonePoints = polygon.getPath()['j'];
 			});
-		}
+		};
 
-		//On balance la requete pour tout initialiser
-		getZone();
+
 	});
 	
 </script>

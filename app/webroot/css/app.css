@@ -18,6 +18,10 @@ body{
 	height: 80%;
 }
 
+.modal-backdrop{
+	z-index: 0;
+}
+
 /************ Bloc de connexion  ******************/
 .connexion{
 	margin-top: 2em;

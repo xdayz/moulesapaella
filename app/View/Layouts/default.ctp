@@ -8,9 +8,10 @@
 	<?= $this->Html->css("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"); ?>
 	<?= $this->Html->css("app.css"); ?>
 
-	<?= $this->Html->script('https://code.jquery.com/jquery-2.1.3.min.js'); ?>
-	<?= $this->Html->script('https://maps.googleapis.com/maps/api/js?key=AIzaSyCauJIAiYa6sE6xrzxUhcUjWiGKF8d8BoY&libraries=drawing'); ?>
 
+	<?= $this->Html->script('jquery'); ?>
+	<?= $this->Html->script('http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js'); ?>
+	<?= $this->Html->script('https://maps.googleapis.com/maps/api/js?key=AIzaSyCauJIAiYa6sE6xrzxUhcUjWiGKF8d8BoY&libraries=drawing'); ?>
 </head>
 <body>
 
